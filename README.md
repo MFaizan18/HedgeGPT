@@ -110,7 +110,7 @@ Why we use it: By subtracting `(μ− 1/2σ)tΔt`, we remove the deterministic d
 
 How it fits: `X k,t` is what we “encode” via B‐splines to build our approximate value/hedge functions.
 
-## 5.5 B‐Spline Basis Evaluation
+## 5.5) B‐Spline Basis Evaluation
 
 1. Choose collocation points `{τi}` across the range of `X`.
 
