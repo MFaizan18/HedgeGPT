@@ -78,3 +78,14 @@ Why we use it: We need a large ensemble of possible future paths `S` under the r
 
 How it fits: These simulated paths feed into both the replicating‐portfolio regression and the Q‐learning agent’s experience.
 
+## 5.2 Discount Factor
+
+![Discount Factor](Discount_Factor.png)
+
+What it is: The per‐step factor to discount monetary payoffs back one time increment.
+
+Why we use it: In both the replicating‐portfolio rollback and the Q‐learning Bellman equation, future values must be discounted at the risk‐free rate 
+`r`.
+
+How it fits: Each backward step multiplies by `γ` to translate future cash flows into present value.
+
