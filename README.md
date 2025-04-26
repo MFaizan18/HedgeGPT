@@ -78,7 +78,7 @@ Why we use it: We need a large ensemble of possible future paths `S` under the r
 
 How it fits: These simulated paths feed into both the replicating‐portfolio regression and the Q‐learning agent’s experience.
 
-## 5.2 Discount Factor
+## 5.2) Discount Factor
 
 ![Discount Factor](Discount_Factor.png)
 
@@ -88,4 +88,15 @@ Why we use it: In both the replicating‐portfolio rollback and the Q‐learning
 `r`.
 
 How it fits: Each backward step multiplies by `γ` to translate future cash flows into present value.
+
+## 5.3) Risk‐Neutral Returns & Demeaning
+
+![Risk‐Neutral Returns & Demeaning](Risk‐Neutral_Returns_&_Demeaning.png)
+
+What it is: The excess return beyond the growth at the risk‐free rate, then centered around zero.
+
+Why we use it: In our regression for the hedge ratio, we need returns with zero mean so that the linear system 
+`𝐴𝜙 = 𝐵` remains well‐conditioned.
+
+How it fits: `^ΔS` enters the `A‐matrix` (variance weights) and the `B‐vector` (covariance with future portfolio payoffs).
 
