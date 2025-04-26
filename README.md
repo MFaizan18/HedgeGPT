@@ -35,3 +35,14 @@ HedgeGPT is a sophisticated trading and risk-management engine that leverages Q-
 • Compares the agent’s learned price to the analytic Black–Scholes price.
 
 • Provides an intuitive performance gauge.
+
+## 3) Why Use HedgeGPT?
+Whether you’re a quant researcher, risk manager, or developer building automated strategies, HedgeGPT provides:
+
+* Deep AI Integration: Combines reinforcement learning with classical finance theory.
+
+* Risk-Aware Pricing: Explicit variance control yields robust option valuations.
+
+* Extensibility: Swap in different reward functions, market simulators, or basis encodings.
+
+* Educational Value: See firsthand how an AI agent discovers the famed delta‐hedging strategy.
