@@ -9,4 +9,29 @@ HedgeGPT is a sophisticated trading and risk-management engine that leverages Q-
 **2.1) Monte Carlo Backbone**
 
 • Simulates tens of thousands of asset‐price paths under risk‐neutral dynamics
+
 • Captures path dependency and nonlinear payoffs
+
+**2.2) B-Spline State Encoding**
+
+• Transforms log‐prices into a compact, continuous feature space
+
+• Enables smooth, high-resolution representation of market states
+
+**2.3) Q-Learning Hedging Agent**
+
+• Learns optimal hedging ratios by maximizing a variance-based reward
+
+• Balances hedging P&L against portfolio variance (risk aversion)
+
+**2.4) Variance-Based Reward Function**
+
+• Penalizes portfolio volatility while rewarding accurate replication
+
+• Adapts dynamically to market fluctuations
+
+**2.5) Transparent Black–Scholes Benchmark**
+
+• Compares the agent’s learned price to the analytic Black–Scholes price
+
+• Provides an intuitive performance gauge
