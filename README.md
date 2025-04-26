@@ -72,3 +72,9 @@ Below is a detailed rundown of every mathematical formula used in main.py, organ
 
 ![Asset‐Price Simulation (Geometric Brownian Motion)](Geometric_Brownian_Motion.png)
 
+What it is: A discrete‐time approximation to the continuous Black–Scholes dynamics.
+
+Why we use it: We need a large ensemble of possible future paths `S` under the real-world drift `𝜇` to train our hedging agent. Even though pricing is risk‐neutral, we simulate with `𝜇` so that our state variables `𝑋` capture realistic drift.
+
+How it fits: These simulated paths feed into both the replicating‐portfolio regression and the Q‐learning agent’s experience.
+
