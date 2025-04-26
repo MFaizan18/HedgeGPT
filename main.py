@@ -201,7 +201,7 @@ def main():
         omega = np.dot(np.linalg.inv(C_mat), D_vec)
         Q.loc[:,t] = np.dot(data_mat_t[t,:,:], omega)
 
-    option_price = Q.loc[:,0].mean()
+    option_price = -(Q.loc[:,0].mean())
 
     # 9) Black–Scholes
     def bs_price_call():
