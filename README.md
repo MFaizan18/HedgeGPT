@@ -36,3 +36,29 @@ Whether you’re a quant researcher, risk manager, or developer building automat
 * Extensibility: Swap in different reward functions, market simulators, or basis encodings.
 
 * Educational Value: See firsthand how an AI agent discovers the famed delta‐hedging strategy.
+
+ ## 4) How to Run the Project
+Follow these steps to run the project:
+
+**4.1) Clone the Repository
+
+bash
+git clone https://github.com/YourUsername/HedgeGPT.git
+4.2) Navigate to the Project Directory
+
+bash
+Copy
+Edit
+cd HedgeGPT
+4.3) Install the Required Packages
+
+bash
+Copy
+Edit
+pip install -r requirements.txt
+4.4) Run the Script
+
+bash
+Copy
+Edit
+python main.py
