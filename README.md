@@ -41,9 +41,11 @@ Whether you’re a quant researcher, risk manager, or developer building automat
 Follow these steps to run the project:
 
 **4.1) Clone the Repository
+
 ```python
 git clone https://github.com/YourUsername/HedgeGPT.git
-'''
+```
+
 4.2) Navigate to the Project Directory
 
 bash
