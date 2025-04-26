@@ -63,3 +63,10 @@ pip install -r requirements.txt
 ```python
 python main.py
 ```
+
+## 5) Core Formulas and Computations
+
+Below is a detailed rundown of every mathematical formula used in main.py, organized by the five main computation stages
+
+**5.1) Asset‐Price Simulation (Geometric Brownian Motion)**
+
