@@ -116,7 +116,7 @@ How it fits: `X k,t` is what we “encode” via B‐splines to build our approx
 
 2. Build a knot vector `k` of order `p=4`.
 
-3. For each flattened x, evaluate `Bj​(x)=splev(x,(k,ej,p−1))`.
+3. For each flattened x, evaluate `Bj​(x)=splev(x,(k, ej, p−1))`.
 
 Reshape into a tensor of shape `(T+1, N MC, nbasis)`.
 
