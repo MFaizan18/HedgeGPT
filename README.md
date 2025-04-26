@@ -106,7 +106,7 @@ How it fits: `^ΔS` enters the `A‐matrix` (variance weights) and the `B‐vect
 
 What it is: A drift‐corrected log‐price used as the input to spline basis functions.
 
-Why we use it: By subtracting `(μ− 1/2 σ )tΔt`, we remove the deterministic drift component and isolate the stochastic part of `lnS`.
+Why we use it: By subtracting `(μ− 1/2σ)tΔt`, we remove the deterministic drift component and isolate the stochastic part of `lnS`.
 
 How it fits: `X k,t` is what we “encode” via B‐splines to build our approximate value/hedge functions.
 
