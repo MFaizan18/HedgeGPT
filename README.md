@@ -70,3 +70,5 @@ Below is a detailed rundown of every mathematical formula used in main.py, organ
 
 **5.1) Asset‐Price Simulation (Geometric Brownian Motion)**
 
+![Asset‐Price Simulation (Geometric Brownian Motion)](Geometric Brownian Motion.png)
+
