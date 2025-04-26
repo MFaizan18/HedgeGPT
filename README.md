@@ -7,5 +7,6 @@ HedgeGPT is a sophisticated trading and risk-management engine that leverages Q-
 ## 2) Key Features
 
 **2.1) Monte Carlo Backbone**
+
 • Simulates tens of thousands of asset‐price paths under risk‐neutral dynamics
 • Captures path dependency and nonlinear payoffs
