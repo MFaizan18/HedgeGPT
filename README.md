@@ -40,27 +40,26 @@ Whether you’re a quant researcher, risk manager, or developer building automat
  ## 4) How to Run the Project
 Follow these steps to run the project:
 
-**4.1) Clone the Repository
+**4.1) Clone the Repository**
 
 ```python
 git clone https://github.com/YourUsername/HedgeGPT.git
 ```
 
-4.2) Navigate to the Project Directory
+**4.2) Navigate to the Project Directory**
 
-bash
-Copy
-Edit
+```python
 cd HedgeGPT
-4.3) Install the Required Packages
+```
 
-bash
-Copy
-Edit
+**4.3) Install the Required Packages**
+
+```python
 pip install -r requirements.txt
-4.4) Run the Script
+```
 
-bash
-Copy
-Edit
+**4.4) Run the Script**
+
+```python
 python main.py
+```
