@@ -110,4 +110,18 @@ Why we use it: By subtracting `(μ− 1/2σ)tΔt`, we remove the deterministic d
 
 How it fits: `X k,t` is what we “encode” via B‐splines to build our approximate value/hedge functions.
 
+## 5.5 B‐Spline Basis Evaluation
+
+1. Choose collocation points `{τi}` across the range of `X`.
+
+2. Build a knot vector `k` of order `p=4`.
+
+3. For each flattened x, evaluate `Bj​(x)=splev(x,(k,ej,p−1))`.
+
+Reshape into a tensor of shape `(T+1, N MC, nbasis)`.
+
+Why we use it: B‐splines provide a smooth, overcomplete set of basis functions that can flexibly approximate any value or hedge‐ratio function of the state.
+
+How it fits: These basis evaluations become the design matrix `Φt` in both the replicating‐portfolio regression and the Q‐function regression.
+
 
