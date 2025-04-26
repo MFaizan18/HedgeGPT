@@ -127,3 +127,5 @@ How it fits: These basis evaluations become the design matrix `Φt` in both the 
 
 
 
+
+
