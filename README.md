@@ -100,3 +100,14 @@ Why we use it: In our regression for the hedge ratio, we need returns with zero 
 
 How it fits: `^ΔS` enters the `A‐matrix` (variance weights) and the `B‐vector` (covariance with future portfolio payoffs).
 
+## 5.4) State Variable
+
+![State Variable](State_Variable.png)
+
+What it is: A drift‐corrected log‐price used as the input to spline basis functions.
+
+Why we use it: By subtracting `(μ− 1/2 σ )tΔt`, we remove the deterministic drift component and isolate the stochastic part of `lnS`.
+
+How it fits: `X k,t` is what we “encode” via B‐splines to build our approximate value/hedge functions.
+
+
