@@ -126,6 +126,8 @@ How it fits: These basis evaluations become the design matrix `Φt` in both the 
 
 ## 5.5) Regression Matrix A(t)
 
+![Regression_Matrix_A(t](Regression_Matrix_A(t).png)
+
 
 
 
