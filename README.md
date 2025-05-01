@@ -126,13 +126,24 @@ How it fits: These basis evaluations become the design matrix `Φt` in both the 
 
 ## 5.5) Regression Matrix A(t)
 
-![Regression_Matrix_A(t](Regression_Matrix_A(t).png)
+![Regression_Matrix_A(t)](Regression_Matrix_A(t).png)
 
 What it is: A weighted Gram matrix of basis functions, with ridge regularization. 
 
 Why we use it: It captures how each basis function’s squared return contributes to the “cost” of fitting the next‐step payoff. The regularizer stabilizes inversion.
 
 How it fits: In solving 𝐴(𝑡)𝜙(𝑡) = 𝐵(𝑡), we obtain the regression coefficients 𝜙(𝑡) that define the optimal hedge.
+
+## Regression Vector 𝐵(𝑡)
+
+![Regression)Vector_B(t)](Regression_Vector_B(t).png)
+
+What it is: The cross‐moment between basis functions and the “incremental P&L” plus a risk‐aversion penalty.
+
+Why we use it: It represents the direction we should move our hedge coefficients to best align the portfolio’s next‐step payoff with the target.
+
+How it fits: Together with 𝐴(𝑡), it yields 𝜙(𝑡) for the optimal hedge ratio.
+
 
 
 
