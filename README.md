@@ -128,6 +128,15 @@ How it fits: These basis evaluations become the design matrix `Φt` in both the 
 
 ![Regression_Matrix_A(t](Regression_Matrix_A(t).png)
 
+What it is: A weighted Gram matrix of basis functions, with ridge regularization. 
+
+Why we use it: It captures how each basis function’s squared return contributes to the “cost” of fitting the next‐step payoff. The regularizer stabilizes inversion.
+
+How it fits: In solving 𝐴(𝑡)𝜙(𝑡) = 𝐵(𝑡), we obtain the regression coefficients 𝜙(𝑡) that define the optimal hedge.
+
+
+
+
 
 
 
