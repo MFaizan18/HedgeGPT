@@ -124,6 +124,9 @@ Why we use it: B‐splines provide a smooth, overcomplete set of basis functions
 
 How it fits: These basis evaluations become the design matrix `Φt` in both the replicating‐portfolio regression and the Q‐function regression.
 
+## 5.5) Regression Matrix A(t)
+
+
 
 
 
