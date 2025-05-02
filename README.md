@@ -195,6 +195,7 @@ How it fits: Printed alongside the RL price to validate convergence and measure 
 ![Result_1)](Result_1.png)
 
 
+![Result_2)](Result_2.png)
 
 
 
