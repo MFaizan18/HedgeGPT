@@ -180,7 +180,7 @@ How it fits: The initial `Q:,0` average is our model’s final option price unde
 
 ## 5.11) Black–Scholes Closed-Form Benchmark
 
-![Black–Scholes closed form)](Black–Scholes.png)
+![Black–Scholes)](Black–Scholes.png)
 
 What it is: The analytic solution for European call and put prices under the Black–Scholes assumptions.
 
