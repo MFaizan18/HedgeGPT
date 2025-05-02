@@ -132,7 +132,7 @@ What it is: A weighted Gram matrix of basis functions, with ridge regularization
 
 Why we use it: It captures how each basis function’s squared return contributes to the “cost” of fitting the next‐step payoff. The regularizer stabilizes inversion.
 
-How it fits: In solving 𝐴(𝑡)𝜙(𝑡) = 𝐵(𝑡), we obtain the regression coefficients 𝜙(𝑡) that define the optimal hedge.
+How it fits: In solving `𝐴(𝑡)𝜙(𝑡) = 𝐵(𝑡)`, we obtain the regression coefficients `𝜙(𝑡)` that define the optimal hedge.
 
 ## 5.7) Regression Vector B(t)
 
@@ -142,7 +142,7 @@ What it is: The cross‐moment between basis functions and the “incremental P&
 
 Why we use it: It represents the direction we should move our hedge coefficients to best align the portfolio’s next‐step payoff with the target.
 
-How it fits: Together with 𝐴(𝑡), it yields 𝜙(𝑡) for the optimal hedge ratio.
+How it fits: Together with `𝐴(𝑡)`, it yields `𝜙(𝑡)` for the optimal hedge ratio.
 
 ## 5.8) Backward Induction for Portfolio Π
 
@@ -150,13 +150,13 @@ How it fits: Together with 𝐴(𝑡), it yields 𝜙(𝑡) for the optimal hedg
 
 What it is: 
 
-1. Compute the hedge ratio ak,t as a linear combination of basis functions.
+1. Compute the hedge ratio `ak,t` as a linear combination of basis functions.
    
-2. Roll back the portfolio value using discounted future portfolio minus cost of hedging trade aΔS
+2. Roll back the portfolio value using discounted future portfolio minus cost of hedging trade `aΔS`
 
 Why we use it: This enforces the self‐financing replication condition: changes in portfolio value come solely from the hedging position.
 
-How it fits: Results in a full pathwise `Π`-table whose time-0 average is the replicating‐portfolio price.
+How it fits: Results in a full pathwise `Π`-table whose `time-0` average is the replicating‐portfolio price.
 
 
 
