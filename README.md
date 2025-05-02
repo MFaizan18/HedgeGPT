@@ -158,7 +158,25 @@ Why we use it: This enforces the self‐financing replication condition: changes
 
 How it fits: Results in a full pathwise `Π`-table whose `time-0` average is the replicating‐portfolio price.
 
+## 5.9) Variance‐Based Reward Function
 
+![Variance‐Based_Reward_Function)](Variance‐Based_Reward_Function.png)
+
+What it is: A per‐step reward that rewards profitable hedging trades `γaΔS` but penalizes overall portfolio variance (risk)
+
+Why we use it: Embeds the trade-off between return and risk directly into the Q‐learning objective, guiding the agent to stable, low-variance hedges.
+
+How it fits: Feeds into the Q‐function regression as the target “immediate reward.”
+
+## 5.10) Q‐Function Regression
+
+![Q‐Function_Regression)](Q‐Function_Regression.png)
+
+What it is: A Bellman‐style regression that fits the action‐value function `Qt` in the same spline basis.
+
+Why we use it: Approximates the long-run value of being in state X k,t and taking hedge a k,t, including future discounted rewards.
+
+How it fits: The initial Q:,0 average is our model’s final option price under the learned RL policy.
 
 
 
