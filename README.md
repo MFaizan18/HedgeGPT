@@ -174,9 +174,31 @@ How it fits: Feeds into the Q‐function regression as the target “immediate r
 
 What it is: A Bellman‐style regression that fits the action‐value function `Qt` in the same spline basis.
 
-Why we use it: Approximates the long-run value of being in state X k,t and taking hedge a k,t, including future discounted rewards.
+Why we use it: Approximates the long-run value of being in state `X k,t` and taking hedge `a k,t`, including future discounted rewards.
 
-How it fits: The initial Q:,0 average is our model’s final option price under the learned RL policy.
+How it fits: The initial `Q:,0` average is our model’s final option price under the learned RL policy.
+
+## 5.11) Black–Scholes Closed-Form Benchmark
+
+![Black–Scholes_Closed-Form_Benchmark)](Black–Scholes_Closed-Form_Benchmark.png)
+
+What it is: The analytic solution for European call and put prices under the Black–Scholes assumptions.
+
+Why we use it: Provides a clear, model‐based benchmark to assess how close our reinforcement-learning agent comes to the known “correct” price.
+
+How it fits: Printed alongside the RL price to validate convergence and measure any residual bias.
+
+**Together, these formulas implement a full reinforcement-learning‐driven hedging pipeline that both replicates and prices European options, blending classical financial theory with modern AI.**
+
+
+
+
+
+
+
+
+
+
 
 
 
