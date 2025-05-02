@@ -190,6 +190,14 @@ How it fits: Printed alongside the RL price to validate convergence and measure 
 
 **Together, these formulas implement a full reinforcement-learning‐driven hedging pipeline that both replicates and prices European options, blending classical financial theory with modern AI.**
 
+## 6) Sample Pricing Results
+
+![Result_1)](Result_1.png)
+
+
+
+
+
 
 
 
