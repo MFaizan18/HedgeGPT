@@ -197,7 +197,7 @@ How it fits: Printed alongside the RL price to validate convergence and measure 
 
 ![Result_2)](Result_2.png)
 
-**Note on Drift (μ) vs. Risk-Neutral Pricing**
+**Note on Drift (μ) vs. Risk-Neutral Pricing:**
 Our Q-learner simulates paths using the real-world drift μ, while the Black–Scholes formula assumes risk-neutral drift r. As μ moves away from r, the learned option price will diverge from the analytic Black–Scholes price because the agent is trained on trajectories that include this additional “real-world” drift component.
 
 
