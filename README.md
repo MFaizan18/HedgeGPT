@@ -124,7 +124,7 @@ Why we use it: B‐splines provide a smooth, overcomplete set of basis functions
 
 How it fits: These basis evaluations become the design matrix `Φt` in both the replicating‐portfolio regression and the Q‐function regression.
 
-## 5.5) Regression Matrix A(t)
+## 5.6) Regression Matrix A(t)
 
 ![Regression_Matrix_A(t)](Regression_Matrix_A(t).png)
 
@@ -134,7 +134,7 @@ Why we use it: It captures how each basis function’s squared return contribute
 
 How it fits: In solving 𝐴(𝑡)𝜙(𝑡) = 𝐵(𝑡), we obtain the regression coefficients 𝜙(𝑡) that define the optimal hedge.
 
-## Regression Vector 𝐵(𝑡)
+## 5.7) Regression Vector B(t)
 
 ![Regression)Vector_B(t)](Regression_Vector_B(t).png)
 
@@ -143,6 +143,21 @@ What it is: The cross‐moment between basis functions and the “incremental P&
 Why we use it: It represents the direction we should move our hedge coefficients to best align the portfolio’s next‐step payoff with the target.
 
 How it fits: Together with 𝐴(𝑡), it yields 𝜙(𝑡) for the optimal hedge ratio.
+
+## 5.8) Backward Induction for Portfolio Π
+
+![Portfolio_Pi)](Portfolio_Pi.png)
+
+What it is: 
+
+1. Compute the hedge ratio ak,t as a linear combination of basis functions.
+   
+2. Roll back the portfolio value using discounted future portfolio minus cost of hedging trade aΔS
+
+Why we use it: This enforces the self‐financing replication condition: changes in portfolio value come solely from the hedging position.
+
+How it fits: Results in a full pathwise `Π`-table whose time-0 average is the replicating‐portfolio price.
+
 
 
 
