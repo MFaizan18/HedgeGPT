@@ -99,11 +99,8 @@ def function_B_vec(t, Pi_hat, delta_S_hat, delta_S, data_mat, gamma, risk_lambda
     pi_next = Pi_hat.iloc[:,t+1].values.astype(float)
     dS_hat_t = delta_S_hat.iloc[:,t].values.astype(float)
     delta_S_t = delta_S.iloc[:,t].values.astype(float)
-    if risk_lambda>0:
-        penalty_term = (1.0/(2*gamma*risk_lambda))*delta_S_t
-    else:
-        penalty_term = 0.0
-    term = pi_next*dS_hat_t + penalty_term
+    penalty_term = (1.0/(2*gamma*risk_lambda))*delta_S_t
+    term = pi_next*dS_hat_t + 0 # made 'penalty_term' Zero for pure hedge
     return np.dot(phi_t.T, term)
 
 def function_C_vec(t, data_mat, reg_param):
@@ -124,7 +121,7 @@ def main():
     # 1) parameters
     risk_lambda = 0.0
     N_MC        = 20000
-    T           = 24
+    T           = 12
     delta_t     = M / T
     gamma       = np.exp(-r*delta_t)
     reg_param   = 1e-3
