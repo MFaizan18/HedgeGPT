@@ -36,15 +36,15 @@ Rather than relying purely on closed-form formulas like Black–Scholes, HedgeGP
 ## 3) Why Use HedgeGPT?
 Whether you're a quant researcher, AI finance developer, or options theorist, HedgeGPT offers:
 
-* Reinforcement Learning Meets Quant Finance: Explore both online and offline RL techniques for solving classical hedging problems with modern AI.
+**Reinforcement Learning Meets Quant Finance:** Explore both online and offline RL techniques for solving classical hedging problems with modern AI.
 
-* Full Control Over Model Components: Swap in different reward functions, basis representations, or dynamics engines.
+**Full Control Over Model Components:** Swap in different reward functions, basis representations, or dynamics engines.
 
-* Advanced Risk Modeling: Penalty-based reward shaping gives you robust control over P&L volatility and replication accuracy.
+**Advanced Risk Modeling:** Penalty-based reward shaping gives you robust control over P&L volatility and replication accuracy.
 
-* Transparency & Interpretability: Compare Q-values, hedge ratios, and value estimates directly to textbook formulas.
+**Transparency & Interpretability:** Compare Q-values, hedge ratios, and value estimates directly to textbook formulas.
 
-* Educational & Research Tool: Understand and visualize how AI discovers hedging strategies like delta hedging—and when it deviates intelligently.
+**Educational & Research Tool:** Understand and visualize how AI discovers hedging strategies like delta hedging—and when it deviates intelligently.
 
  ## 4) How to Run the Project
 Follow these steps to run the project:
