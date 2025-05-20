@@ -15,11 +15,13 @@ Rather than relying purely on closed-form formulas like Black–Scholes, HedgeGP
 
 **2.2) B-Spline State Encoding**
 
-* Transforms log-prices into a compact, continuous feature space, enabling smooth, high-resolution representation of market states.
+* Encodes log-price states using B-spline basis functions, enabling smooth, expressive, and compact representations of the trading environment.
+* Dynamically adjusts basis complexity based on time-to-maturity using a calibrated nearest-neighbor heuristic.
 
-**2.3) Q-Learning Hedging Agent**
+**2.3) Dual Reinforcement Learning Modes**
 
-* Learns optimal hedge ratios by maximizing a variance-based reward, striking the right balance between hedging P&L and portfolio variance.
+* On-Policy Q-Learning: Learns hedge strategies by maximizing the expected cumulative reward while actively exploring the market.
+* Off-Policy Fitted Q Iteration (FQI): Learns from historical state-action transitions using least squares regression with regularization, enabling batch-mode learning and stable policy improvement.
 
 **2.4) Variance-Based Reward Function**
 
