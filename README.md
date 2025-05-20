@@ -23,24 +23,28 @@ Rather than relying purely on closed-form formulas like Black–Scholes, HedgeGP
 * On-Policy Q-Learning: Learns hedge strategies by maximizing the expected cumulative reward while actively exploring the market.
 * Off-Policy Fitted Q Iteration (FQI): Learns from historical state-action transitions using least squares regression with regularization, enabling batch-mode learning and stable policy improvement.
 
-**2.4) Variance-Based Reward Function**
+**2.4) Reward Function with Risk-Aware Control**
 
-* Penalizes portfolio volatility while rewarding accurate payoff replication, adapting dynamically to changing market conditions.
+* Incorporates a flexible variance-penalized reward of the form `reward = −(portfolio_variance + λ * hedge_cost),` directly balancing risk and return.
+* The regularization parameter `λ` allows fine-tuning between aggressive payoff tracking and conservative hedging.
 
-**2.5) Transparent Black–Scholes Benchmark**
+**2.5) Side-by-Side Black–Scholes Benchmark**
 
-* Directly compares the agent’s learned option price to the analytic Black–Scholes price, providing an intuitive gauge of model performance.
+* Compares the `learned option` price from each RL agent with the analytic `Black–Scholes formula`, offering a direct and interpretable measure of model performance.
+* Enables detailed validation and calibration of learning behavior.
 
 ## 3) Why Use HedgeGPT?
-Whether you’re a quant researcher, risk manager, or developer building automated strategies, HedgeGPT provides:
+Whether you're a quant researcher, AI finance developer, or options theorist, HedgeGPT offers:
 
-* Deep AI Integration: Combines reinforcement learning with classical finance theory.
+* Reinforcement Learning Meets Quant Finance: Explore both online and offline RL techniques for solving classical hedging problems with modern AI.
 
-* Risk-Aware Pricing: Explicit variance control yields robust option valuations.
+* Full Control Over Model Components: Swap in different reward functions, basis representations, or dynamics engines.
 
-* Extensibility: Swap in different reward functions, market simulators, or basis encodings.
+* Advanced Risk Modeling: Penalty-based reward shaping gives you robust control over P&L volatility and replication accuracy.
 
-* Educational Value: See firsthand how an AI agent discovers the famed delta‐hedging strategy.
+* Transparency & Interpretability: Compare Q-values, hedge ratios, and value estimates directly to textbook formulas.
+
+* Educational & Research Tool: Understand and visualize how AI discovers hedging strategies like delta hedging—and when it deviates intelligently.
 
  ## 4) How to Run the Project
 Follow these steps to run the project:
