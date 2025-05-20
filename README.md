@@ -2,13 +2,16 @@
 Unlock next-generation option pricing and hedging with an AI-powered reinforcement-learning framework built on the Black–Scholes model
 
 ## 1) What Exactly Is HedgeGPT?
-HedgeGPT is a sophisticated trading and risk-management engine that leverages Q-learning to price and dynamically hedge European options. Rather than relying purely on closed-form formulas, HedgeGPT uses large-scale Monte Carlo simulation of underlying asset paths, encodes the market state with B-spline basis functions, and trains a Q-learner to discover optimal hedging strategies in a simulated Black–Scholes world. The result is an AI agent that learns to replicate option payoffs and manage risk in a fully automated, data-driven fashion.
+HedgeGPT is a high-performance AI-powered trading and risk-management engine designed to price and dynamically hedge European options. It harnesses both `on-policy` and `off-policy` reinforcement learning—namely `Q-learning` and `Fitted Q Iteration (FQI)`—to learn optimal hedging strategies directly from Monte Carlo market simulations.
+
+Rather than relying purely on closed-form formulas like Black–Scholes, HedgeGPT uses B-spline encodings of simulated market states, then applies policy iteration and function approximation to discover and compare robust risk-aware strategies. The engine supports both `value-based` hedging and `variance-aware reward shaping`, making it suitable for research and deployment in realistic financial environments.
 
 ## 2) Key Features
 
 **2.1) Monte Carlo Backbone**
 
-* Simulates tens of thousands of asset‐price paths under risk‐neutral dynamics to capture path dependency and nonlinear payoffs in a single, unified framework.
+* Simulates thousands of log-price paths under risk-neutral Black–Scholes dynamics, capturing realistic option payoffs and market uncertainty.
+* Fully customizable asset dynamics, initial conditions, and volatility assumptions.
 
 **2.2) B-Spline State Encoding**
 
