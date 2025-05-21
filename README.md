@@ -256,6 +256,10 @@ How it fits: The terminal boundary conditions for 𝑊_bar_𝑇(𝑋𝑇) direct
 
 where 𝑃𝑇(𝑋𝑇) is the terminal payoff. These conditions seed the backward Bellman recursion, ensuring that the learned 𝑊_ba_𝑡 produces the correct terminal Q‑values and smoothly propagates value estimates back to 𝑡 = 0.
 
+## 5.14) Vectorized Q‑Function Form (Hadamard Form)
+
+What it is: An alternate formulation of the quadratic Q‑function that expresses the value as an inner product between a parameter vector and a state-action–dependent vector built via the Hadamard (element-wise) product.
+
 
 
 ----------------
