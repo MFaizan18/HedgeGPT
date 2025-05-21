@@ -206,6 +206,13 @@ by replacing expectations entering this equation by their empirical averages.
 
 A stochastic perturbation of the on‑policy hedge ratio `at∗(Xt)`, defined by
 
+![noisy_hedge](noisy_hedge.png)
+
+Why we use it: Introduces exploration around the optimal action to generate a richer, off‑policy dataset. By sampling ξt from a uniform band around 1, we ensure the agent sees both slightly over‑ and under‑hedged scenarios.
+
+How it fits: The noisy action (at) is used in the reward calculation and portfolio rollback:
+
+
 
 ----------------
 **Note on Drift (μ) vs. Risk-Neutral Pricing:**
