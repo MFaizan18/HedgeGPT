@@ -187,25 +187,13 @@ Why we use it: Approximates the long-run value of being in state `X k,t` and tak
 
 How it fits: The initial `Q:,0` average is our model’s final option price under the learned RL policy.
 
-## 5.11) Black–Scholes Closed-Form Benchmark
 
-![black_scholes)](black_scholes.png)
+**Together, these formulas implement a complete on-policy reinforcement learning hedging pipeline, where the transition probabilities are assumed to be known. This enables accurate backward induction and value estimation, effectively blending classical financial theory with dynamic programming techniques.**
 
-What it is: The analytic solution for European call and put prices under the Black–Scholes assumptions.
-
-Why we use it: Provides a clear, model‐based benchmark to assess how close our reinforcement-learning agent comes to the known “correct” price.
-
-How it fits: Printed alongside the RL price to validate convergence and measure any residual bias.
-
-**Together, these formulas implement a full reinforcement-learning‐driven hedging pipeline that both replicates and prices European options, blending classical financial theory with modern AI.**
-
-## 6) Sample Pricing Results
-
-![Result_1)](Result_1.png)
+**In contrast, our second approach tackles the more challenging and realistic setting where transition probabilities are unknown. To address this, we employ a Q-learning–based reinforcement learning framework, allowing the agent to learn optimal pricing and hedging strategies directly from simulated experience. The following formulas lay the foundation for this off-policy method.**
 
 
-![Result_2)](Result_2.png)
-
+-----------------------------------------------------------
 **Note on Drift (μ) vs. Risk-Neutral Pricing:**
 Our Q-learner simulates paths using the real-world drift μ, while the Black–Scholes formula assumes risk-neutral drift r. As μ moves away from r, the learned option price will diverge from the analytic Black–Scholes price because the agent is trained on trajectories that include this additional “real-world” drift component.
 
