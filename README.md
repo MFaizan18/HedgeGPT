@@ -212,7 +212,7 @@ Why we use it: Introduces exploration around the optimal action to generate a ri
 
 How it fits: The noisy action (at) is used in the reward calculation and portfolio rollback:
 
-![noisy_hedge_usage](noisy_hedge_usage.png)
+![noisy_action_usage](noisy_action_usage.png)
 
 Thus, the uniform noise directly injects variability into the off‑policy experience, which the RL algorithm uses to learn a robust Q‑function without knowing true transition probabilities.
 
