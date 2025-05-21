@@ -204,7 +204,7 @@ by replacing expectations entering this equation by their empirical averages.
 
 ## 5.11) Noisy Hedge Action
 
-A stochastic perturbation of the on‑policy hedge ratio `at∗(Xt)`, defined by
+What is it: A stochastic perturbation of the on‑policy hedge ratio `at∗(Xt)`, defined by
 
 ![noisy_hedge](noisy_hedge.png)
 
@@ -218,10 +218,23 @@ Thus, the uniform noise directly injects variability into the off‑policy exper
 
 ## 5.12) Quadratic Q‑Function Expansion
 
-What it is:
-A representation of the optimal action‑value function Qt∗(Xt,at) as a quadratic form in the hedge at, using the same spline basis {𝐹𝑗(𝑋)} from the DP solution. Concretely:
+What it is: A representation of the optimal action‑value function Qt∗(Xt,at) as a quadratic form in the hedge at, using the same spline basis {𝐹𝑗(𝑋)} from the DP solution. Concretely:
 
 ![Quadratic_Q_function_exp](Quadratic_Q_function_exp.png)
+
+and 𝑊𝑡 is a `3×𝑀` coefficient matrix.
+
+Why we use it: Because 𝑄𝑡∗ is known to be quadratic in the hedge 𝑎𝑡 under the Black–Scholes assumptions, this expansion lets us reduce the infinite‑dimensional regression problem to estimating the finite‑dimensional weight matrix 𝑊𝑡.
+
+How it fits: We reuse the same spline features `Φ(𝑋𝑡)` from on‑policy DP to build `Ψ𝑡 = 𝐴𝑡⊗Φ(𝑋𝑡)` In off‑policy Bellman regression, we solve
+
+![Wt](Wt.png)
+
+and then reconstruct
+
+![reconstruct_Q](reconstruct_Q)
+
+providing a fully parametric, quadratic Q‑function that drives policy evaluation and improvement.
 
 
 
