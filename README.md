@@ -202,6 +202,10 @@ We try to approximately solve the Bellman optimality equation
 
 by replacing expectations entering this equation by their empirical averages.
 
+## 5.11) Noisy Hedge Action
+
+A stochastic perturbation of the on‑policy hedge ratio `at∗(Xt)`, defined by
+
 
 ----------------
 **Note on Drift (μ) vs. Risk-Neutral Pricing:**
