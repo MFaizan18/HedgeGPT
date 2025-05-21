@@ -226,7 +226,7 @@ and 𝑊𝑡 is a `3×𝑀` coefficient matrix.
 
 Why we use it: Because 𝑄𝑡∗ is known to be quadratic in the hedge 𝑎𝑡 under the Black–Scholes assumptions, this expansion lets us reduce the infinite‑dimensional regression problem to estimating the finite‑dimensional weight matrix 𝑊𝑡.
 
-How it fits: We reuse the same spline features `Φ(𝑋𝑡)` from on‑policy DP to build `Ψ𝑡 = 𝐴𝑡⊗Φ(𝑋𝑡)` In off‑policy Bellman regression, we solve
+How it fits: We reuse the same spline features `Φ(𝑋𝑡)` from on‑policy DP to build `Ψ𝑡 = 𝐴𝑡 ⊗ Φ(𝑋𝑡)` In off‑policy Bellman regression, we solve
 
 ![Wt](Wt.png)
 
@@ -248,7 +248,7 @@ So that
 
 Here 𝐴𝑡 = (1, 𝑎𝑡, 1/2𝑎𝑡**2)**𝑇 as before, and 𝑊_bar_𝑡(𝑋𝑡) is a length‑3 vector of state‑dependent coefficients.
 
-Why we use it: By compressing `𝑊𝑡Φ(𝑋𝑡)` into the single vector `𝑊_bar_𝑡(𝑋𝑡)`, we simplify notation and highlight that, at each time t, the Q‑value is a simple inner product between the action features 𝐴𝑡 and a state‑specific weight vector 𝑊_bar_𝑡.
+Why we use it: By compressing `𝑊𝑡 Φ (𝑋𝑡)` into the single vector `𝑊_bar_𝑡(𝑋𝑡)`, we simplify notation and highlight that, at each time t, the Q‑value is a simple inner product between the action features 𝐴𝑡 and a state‑specific weight vector 𝑊_bar_𝑡.
 
 How it fits: The terminal boundary conditions for 𝑊_bar_𝑇(𝑋𝑇) directly encode the payoff and risk penalty:
 
@@ -259,12 +259,25 @@ where 𝑃𝑇(𝑋𝑇) is the terminal payoff. These conditions seed the backw
 ## 5.14) Vectorized Q‑Function Form (Hadamard Form)
 
 What it is: An alternate formulation of the quadratic Q‑function that expresses the value as an inner product between a parameter vector and a state-action–dependent vector built via the Hadamard (element-wise) product.
+We rewrite the Q-function as:
 
+![vec_Q_function](vec_Q_function.png)
 
+Here,
+* `∘` represents the Hadamard (element-wise) product,
+* `(⃗⋅)` flattens a matrix into a column vector,
+* `𝑊_bar_𝑡 = vec(𝑊𝑡)` is the parameter vector,
+* `𝜓_bar_(𝑋𝑡,𝑎𝑡) = vec(𝐴𝑡 Φ (𝑋𝑡)**𝑇)` is the feature vector derived from the outer product of state and action terms.
 
-----------------
+Why we use it: This vectorized Hadamard form enables a linear-in-parameters structure that simplifies regression, gradient updates, and learning via least squares or stochastic optimization. It decouples the functional complexity of `𝑄` into a compact inner product, helping us express learning targets in matrix-vector form.
+
+How it fits: This form is used throughout the backward recursion to learn the weights 𝑊_bar_𝑡 efficiently. By treating the Q-function as a dot product between basis-encoded features and learnable parameters, we can directly solve for 𝑊_bar_𝑡 using batched linear regression over simulated samples. This structure also allows us to introduce regularization and model selection seamlessly in our learning pipeline.
+
+```
 **Note on Drift (μ) vs. Risk-Neutral Pricing:**
 Our Q-learner simulates paths using the real-world drift μ, while the Black–Scholes formula assumes risk-neutral drift r. As μ moves away from r, the learned option price will diverge from the analytic Black–Scholes price because the agent is trained on trajectories that include this additional “real-world” drift component.
+```
+
 
 
 
