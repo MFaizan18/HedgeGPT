@@ -190,10 +190,12 @@ How it fits: The initial `Q:,0` average is our model’s final option price unde
 
 **Together, these formulas implement a complete on-policy reinforcement learning hedging pipeline, where the transition probabilities are assumed to be known. This enables accurate backward induction and value estimation, effectively blending classical financial theory with dynamic programming techniques.**
 
+-
+
 **In contrast, our second approach tackles the more challenging and realistic setting where transition probabilities are unknown. To address this, we employ a Q-learning–based reinforcement learning framework, allowing the agent to learn optimal pricing and hedging strategies directly from simulated experience. The following formulas lay the foundation for this off-policy method.**
 
 
------------------------------------------------------------
+----------------
 **Note on Drift (μ) vs. Risk-Neutral Pricing:**
 Our Q-learner simulates paths using the real-world drift μ, while the Black–Scholes formula assumes risk-neutral drift r. As μ moves away from r, the learned option price will diverge from the analytic Black–Scholes price because the agent is trained on trajectories that include this additional “real-world” drift component.
 
