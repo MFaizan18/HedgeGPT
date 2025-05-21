@@ -232,7 +232,7 @@ How it fits: We reuse the same spline features `Φ(𝑋𝑡)` from on‑policy D
 
 and then reconstruct
 
-![reconstruct_Q](reconstruct_Q)
+![reconstruct_Q](reconstruct_Q.png)
 
 providing a fully parametric, quadratic Q‑function that drives policy evaluation and improvement.
 
