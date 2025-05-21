@@ -198,6 +198,10 @@ How it fits: The initial `Q:,0` average is our model’s final option price unde
 
 We try to approximately solve the Bellman optimality equation
 
+![bellman)](bellman.png)
+
+by replacing expectations entering this equation by their empirical averages.
+
 
 ----------------
 **Note on Drift (μ) vs. Risk-Neutral Pricing:**
