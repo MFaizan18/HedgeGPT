@@ -221,6 +221,8 @@ Thus, the uniform noise directly injects variability into the off‑policy exper
 What it is:
 A representation of the optimal action‑value function Qt∗(Xt,at) as a quadratic form in the hedge at, using the same spline basis {𝐹𝑗(𝑋)} from the DP solution. Concretely:
 
+![Quadratic_Q_function_exp](Quadratic_Q_function_exp.png)
+
 
 
 ----------------
