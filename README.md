@@ -236,6 +236,11 @@ and then reconstruct
 
 providing a fully parametric, quadratic Q‑function that drives policy evaluation and improvement.
 
+## 5.13) Alternative Q‑Function Decomposition
+
+An equivalent form of the quadratic Q‑function expansion that factors out the time‑dependent weight vector
+
+![Alternate_Wt](Alternate_Wt.png)
 
 
 ----------------
