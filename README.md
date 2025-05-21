@@ -216,6 +216,11 @@ How it fits: The noisy action (at) is used in the reward calculation and portfol
 
 Thus, the uniform noise directly injects variability into the off‑policy experience, which the RL algorithm uses to learn a robust Q‑function without knowing true transition probabilities.
 
+## 5.12) Quadratic Q‑Function Expansion
+
+What it is:
+A representation of the optimal action‑value function Qt∗(Xt,at) as a quadratic form in the hedge at, using the same spline basis {𝐹𝑗(𝑋)} from the DP solution. Concretely:
+
 
 
 ----------------
