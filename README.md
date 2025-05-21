@@ -265,7 +265,7 @@ We rewrite the Q-function as:
 
 Here,
 * `∘` represents the Hadamard (element-wise) product,
-* `(⃗⋅)` flattens a matrix into a column vector,
+* `(->)` flattens a matrix into a column vector,
 * `𝑊_bar_𝑡 = vec(𝑊𝑡)` is the parameter vector,
 * `𝜓_bar_(𝑋𝑡,𝑎𝑡) = vec(𝐴𝑡 Φ (𝑋𝑡)**𝑇)` is the feature vector derived from the outer product of state and action terms.
 
