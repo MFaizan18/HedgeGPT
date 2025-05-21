@@ -238,9 +238,24 @@ providing a fully parametric, quadratic Q‑function that drives policy evaluati
 
 ## 5.13) Alternative Q‑Function Decomposition
 
-An equivalent form of the quadratic Q‑function expansion that factors out the time‑dependent weight vector
+What is it: An equivalent form of the quadratic Q‑function expansion that factors out the time‑dependent weight vector
 
 ![Alternate_Wt](Alternate_Wt.png)
+
+So that
+
+![Q_alternate_Wt](Q_alternate_Wt.png)
+
+Here 𝐴𝑡 = (1, 𝑎𝑡, 1/2𝑎𝑡**2)**𝑇 as before, and 𝑊_bar_𝑡(𝑋𝑡) is a length‑3 vector of state‑dependent coefficients.
+
+Why we use it: By compressing 𝑊𝑡Φ(𝑋𝑡) into the single vector 𝑊_bar_𝑡(𝑋𝑡), we simplify notation and highlight that, at each time t, the Q‑value is a simple inner product between the action features 𝐴𝑡 and a state‑specific weight vector 𝑊_bar_𝑡.
+
+How it fits: The terminal boundary conditions for 𝑊_bar_𝑇(𝑋𝑇) directly encode the payoff and risk penalty:
+
+![terminal_alternate_Wt](terminal_alternate_Wt.png)
+
+where 𝑃𝑇(𝑋𝑇) is the terminal payoff. These conditions seed the backward Bellman recursion, ensuring that the learned 𝑊_ba𝑡 produces the correct terminal Q‑values and smoothly propagates value estimates back to 𝑡 = 0.
+
 
 
 ----------------
