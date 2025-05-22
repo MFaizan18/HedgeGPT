@@ -283,6 +283,16 @@ We define the feature covariance matrix 𝑆𝑡 ∈ 𝑅𝑑×𝑑 and the regr
 ![op_fqi](op_fqi.png)
 
 Where: `𝜓_bar_𝑛(𝑋𝑡𝑘,𝑎𝑡𝑘)` is the 𝑛 - th element of the vectorized feature vector 𝜓_bar_(𝑋𝑡𝑘,𝑎𝑡𝑘), formed from the outer product of the action basis `𝐴𝑡` and state basis `Φ(𝑋𝑡𝑘)`.
+
+Why we use it: This structure supports off-policy reinforcement learning, where the data does not need to be generated from the current policy. The matrix `𝑆𝑡` captures the correlations between basis features, while `𝑀𝑡` captures the target values for those features based on both reward and next-step Q-values.
+
+By solving the system:
+
+![fqi_sub_1](fqi_sub_1.png)
+
+we obtain the weight vector 𝑊_bar_𝑡 that parameterizes the Q-function at time `𝑡`:
+
+![fqi_sub_2](fqi_sub_2.png)
       
 
 
