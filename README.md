@@ -273,10 +273,10 @@ Why we use it: This vectorized Hadamard form enables a linear-in-parameters stru
 
 How it fits: This form is used throughout the backward recursion to learn the weights 𝑊_bar_𝑡 efficiently. By treating the Q-function as a dot product between basis-encoded features and learnable parameters, we can directly solve for 𝑊_bar_𝑡 using batched linear regression over simulated samples. This structure also allows us to introduce regularization and model selection seamlessly in our learning pipeline.
 
-```
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 **Note on Drift (μ) vs. Risk-Neutral Pricing:**
 Our Q-learner simulates paths using the real-world drift μ, while the Black–Scholes formula assumes risk-neutral drift r. As μ moves away from r, the learned option price will diverge from the analytic Black–Scholes price because the agent is trained on trajectories that include this additional “real-world” drift component.
-```
+
 
 
 
