@@ -303,6 +303,8 @@ This formulation addresses the overestimation bias in Q-learning by avoiding num
 
 We define the Q-function at time 𝑡 + 1 as a quadratic function in the action variable 𝑎_star_t + 1:
 
+![Qt+1_star](Qt+1_star.png)
+
 
       
 
