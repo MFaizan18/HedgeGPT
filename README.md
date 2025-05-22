@@ -293,6 +293,12 @@ By solving the system:
 we obtain the weight vector 𝑊_bar_𝑡 that parameterizes the Q-function at time `𝑡`:
 
 ![fqi_sub_2](fqi_sub_2.png)
+
+How it fits: This step is repeated for each 𝑡 = 𝑇−1, 𝑇−2,...,0 in a backward dynamic programming fashion, using the already-estimated 𝑄𝑡_star + 1 in the target computation. This recursion enables FQI to approximate the optimal Q-function over time without needing to follow the policy that generated the data.
+
+## 5.16) Avoiding Overestimation in Q-learning with Analytic Optimal Action
+
+
       
 
 
