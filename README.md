@@ -288,7 +288,7 @@ Where: `𝜓_bar_𝑛(𝑋𝑡𝑘,𝑎𝑡𝑘)` is the 𝑛 - th element of th
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 **Note on Drift (μ) vs. Risk-Neutral Pricing:**
-Our Q-learner simulates paths using the real-world drift μ, while the Black–Scholes formula assumes risk-neutral drift r. As μ moves away from r, the learned option price will diverge from the analytic Black–Scholes price because the agent is trained on trajectories that include this additional “real-world” drift component.
+Our models simulates paths using the real-world drift μ, while the Black–Scholes formula assumes risk-neutral drift r. As μ moves away from r, the learned option price will diverge from the analytic Black–Scholes price because the agent is trained on trajectories that include this additional “real-world” drift component.
 
 
 
