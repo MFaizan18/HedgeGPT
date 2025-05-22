@@ -282,6 +282,9 @@ We define the feature covariance matrix 𝑆𝑡 ∈ 𝑅𝑑×𝑑 and the regr
 
 ![op_fqi](op_fqi.png)
 
+Where: `𝜓_bar_𝑛(𝑋𝑡𝑘,𝑎𝑡𝑘)` is the 𝑛 - th element of the vectorized feature vector 𝜓_bar_(𝑋𝑡𝑘,𝑎𝑡𝑘), formed from the outer product of the action basis `𝐴𝑡` and state basis `Φ(𝑋𝑡𝑘)`.
+      
+
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 **Note on Drift (μ) vs. Risk-Neutral Pricing:**
