@@ -273,6 +273,16 @@ Why we use it: This vectorized Hadamard form enables a linear-in-parameters stru
 
 How it fits: This form is used throughout the backward recursion to learn the weights 𝑊_bar_𝑡 efficiently. By treating the Q-function as a dot product between basis-encoded features and learnable parameters, we can directly solve for 𝑊_bar_𝑡 using batched linear regression over simulated samples. This structure also allows us to introduce regularization and model selection seamlessly in our learning pipeline.
 
+5.15) Off‑Policy FQI Regression Targets
+
+What it is:
+This formulation defines the `regression step in Off-Policy Fitted Q Iteration (FQI)` using Monte Carlo sample data. It solves a least-squares problem to fit the Q-function at time `𝑡`, based on observed state transitions and rewards.
+
+We define the feature covariance matrix 𝑆𝑡 ∈ 𝑅𝑑×𝑑 and the regression target vector 𝑀𝑡 ∈ 𝑅𝑑 as:
+
+![op_fqi](op_fqi.png)
+
+
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 **Note on Drift (μ) vs. Risk-Neutral Pricing:**
 Our Q-learner simulates paths using the real-world drift μ, while the Black–Scholes formula assumes risk-neutral drift r. As μ moves away from r, the learned option price will diverge from the analytic Black–Scholes price because the agent is trained on trajectories that include this additional “real-world” drift component.
