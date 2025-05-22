@@ -305,6 +305,18 @@ We define the Q-function at time 𝑡 + 1 as a quadratic function in the action 
 
 ![Qt+1_star](Qt+1_star.png)
 
+This is consistent with the model’s structure, where Q-values are represented as quadratic functions of the action.
+
+**Why we use the analytic action**
+
+To avoid bias introduced by maximization over noisy Q-estimates (a known issue in classical Q-learning), we do not directly maximize Equation (14) over all possible actions. Instead, we substitute the known optimal action 𝑎𝑡_star(𝑋𝑡), already derived in the on-policy setting, into the Q-function.
+
+That optimal action is:
+
+
+
+
+
 
       
 
