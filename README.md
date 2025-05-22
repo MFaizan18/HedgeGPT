@@ -309,10 +309,11 @@ This is consistent with the model’s structure, where Q-values are represented 
 
 **Why we use the analytic action**
 
-To avoid bias introduced by maximization over noisy Q-estimates (a known issue in classical Q-learning), we do not directly maximize Equation (14) over all possible actions. Instead, we substitute the known optimal action 𝑎𝑡_star(𝑋𝑡), already derived in the on-policy setting, into the Q-function.
+To avoid bias introduced by maximization over noisy Q-estimates (a known issue in classical Q-learning), we do not directly maximize above Equation over all possible actions. Instead, we substitute the known optimal action 𝑎𝑡_star(𝑋𝑡), already derived in the on-policy setting, into the Q-function.
 
 That optimal action is:
 
+![optimal_at](optimal_at.png)
 
 
 
