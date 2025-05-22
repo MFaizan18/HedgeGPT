@@ -298,6 +298,11 @@ How it fits: This step is repeated for each 𝑡 = 𝑇−1, 𝑇−2,...,0 in a
 
 ## 5.16) Avoiding Overestimation in Q-learning with Analytic Optimal Action
 
+What it is:
+This formulation addresses the overestimation bias in Q-learning by avoiding numerical maximization of the Q-function. Instead of computing the Q-function at 𝑡+1 and numerically maximizing it over actions 𝑎𝑡 + 1, it leverages the quadratic structure of the model to analytically compute the optimal action 𝑎𝑡_star(𝑋𝑡), resulting in a stable, unbiased estimate of the policy.
+
+We define the Q-function at time 𝑡 + 1 as a quadratic function in the action variable 𝑎_star_t + 1:
+
 
       
 
@@ -305,9 +310,6 @@ How it fits: This step is repeated for each 𝑡 = 𝑇−1, 𝑇−2,...,0 in a
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 **Note on Drift (μ) vs. Risk-Neutral Pricing:**
 Our models simulates paths using the real-world drift μ, while the Black–Scholes formula assumes risk-neutral drift r. As μ moves away from r, the learned option price will diverge from the analytic Black–Scholes price because the agent is trained on trajectories that include this additional “real-world” drift component.
-
-
-
 
 
 
