@@ -342,6 +342,18 @@ This final component of the algorithm ensures that value updates are accurate an
 **Note on Drift (μ) vs. Risk-Neutral Pricing:**
 Our models simulates paths using the real-world drift μ, while the Black–Scholes formula assumes risk-neutral drift r. As μ moves away from r, the learned option price will diverge from the analytic Black–Scholes price because the agent is trained on trajectories that include this additional “real-world” drift component.
 
+## Conclusion
+
+In this work, we successfully developed and implemented a dynamic reinforcement learning framework for option pricing and hedging using the QLBS (Q-Learner in the Black-Scholes) model. Our approach unifies both on-policy and off-policy strategies, allowing us to evaluate and optimize trading decisions under different learning paradigms. By systematically applying backward induction and linear function approximation, we transform complex sequential decision-making into a tractable and elegant linear algebra problem. This not only enables efficient computation of optimal strategies but also ensures scalability across high-dimensional market environments. The use of structured feature vectors and weighted approximations further provides a compact, interpretable formulation for learning state-action value functions, making the framework both powerful and transparent
+
+Furthermore, we maintained consistency in using the optimal policy across both on-policy and off-policy formulations, ensuring stability in the derived strategies. The mathematical rigor and modular structure of this approach make it adaptable for real-world market environments where analytical pricing is often infeasible.
+
+Limitations: 
+One current limitation of our framework is that it does not yet incorporate the Greeks—namely delta, gamma, theta, vega, and rho—which are fundamental to classical options pricing and sensitivity analysis. While our approach optimizes directly over returns and risk, integrating these derivatives of option value with respect to underlying variables would enrich the model with more robust pricing diagnostics and hedging capabilities.
+
+Looking Ahead:
+Future extensions may involve incorporating these risk sensitivities (collectively known as the Greeks) into the reward formulation or policy constraints, enabling a fully comprehensive, hybrid model that bridges modern RL-based learning with classical financial theory. This would not only enhance the model’s practical utility but also provide deeper insights into market microstructures and hedging dynamics.
+
 
 
 
