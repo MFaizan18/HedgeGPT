@@ -342,6 +342,12 @@ This final component of the algorithm ensures that value updates are accurate an
 **Note on Drift (μ) vs. Risk-Neutral Pricing:**
 Our models simulates paths using the real-world drift μ, while the Black–Scholes formula assumes risk-neutral drift r. As μ moves away from r, the learned option price will diverge from the analytic Black–Scholes price because the agent is trained on trajectories that include this additional “real-world” drift component.
 
+## 6) Results
+
+![results_1](results_1.png)
+
+![results_2](results_2.png)
+
 ## Conclusion
 
 In this work, we successfully developed and implemented a dynamic reinforcement learning framework for option pricing and hedging. Our approach unifies both on-policy and off-policy strategies, allowing us to evaluate and optimize trading decisions under different learning paradigms. By systematically applying backward induction and linear function approximation, we transform complex sequential decision-making into a tractable and elegant linear algebra problem. This not only enables efficient computation of optimal strategies but also ensures scalability across high-dimensional market environments. The use of structured feature vectors and weighted approximations further provides a compact, interpretable formulation for learning state-action value functions, making the framework both powerful and transparent
