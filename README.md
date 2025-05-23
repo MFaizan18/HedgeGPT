@@ -325,7 +325,7 @@ This analytic substitution has two major advantages:
 
 * Ensures consistency between on-policy and off-policy settings by using the same hedge formula.
 
-How it fits: By plugging the known 𝑎𝑡_star into Equation optimal Q equation, we obtain a stable Q-value for regression targets in the off-policy FQI step. 
+How it fits: By plugging the known 𝑎𝑡_star into optimal Q equation, we obtain a stable Q-value for regression targets in the off-policy FQI step. 
 
 This makes the process:
 
