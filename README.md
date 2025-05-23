@@ -349,7 +349,7 @@ In this work, we successfully developed and implemented a dynamic reinforcement 
 Furthermore, we maintained consistency in using the optimal policy across both on-policy and off-policy formulations, ensuring stability in the derived strategies. The mathematical rigor and modular structure of this approach make it adaptable for real-world market environments where analytical pricing is often infeasible.
 
 Limitations: 
-One current limitation of our framework is that it does not yet incorporate the Greeks—namely delta, gamma, theta, vega, and rho—which are fundamental to classical options pricing and sensitivity analysis. While our approach optimizes directly over returns and risk, integrating these derivatives of option value with respect to underlying variables would enrich the model with more robust pricing diagnostics and hedging capabilities.
+One current limitation of our framework is that it does not yet incorporate the Greeks—namely delta, gamma, theta, vega, and rho, which are fundamental to classical options pricing and sensitivity analysis. While our approach optimizes directly over returns and risk, integrating these derivatives of option value with respect to underlying variables would enrich the model with more robust pricing diagnostics and hedging capabilities.
 
 Looking Ahead:
 Future extensions may involve incorporating these risk sensitivities (collectively known as the Greeks) into the reward formulation or policy constraints, enabling a fully comprehensive, hybrid model that bridges modern RL-based learning with classical financial theory. This would not only enhance the model’s practical utility but also provide deeper insights into market microstructures and hedging dynamics.
