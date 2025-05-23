@@ -339,10 +339,8 @@ This step is repeated in backward recursion over time steps 𝑡 = 𝑇 − 1, �
 
 This final component of the algorithm ensures that value updates are accurate and reflect both the optimal policy and the market's risk-return trade-off, closing the loop in the backward Q-function propagation.
 
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 **Note on Drift (μ) vs. Risk-Neutral Pricing:**
 Our models simulates paths using the real-world drift μ, while the Black–Scholes formula assumes risk-neutral drift r. As μ moves away from r, the learned option price will diverge from the analytic Black–Scholes price because the agent is trained on trajectories that include this additional “real-world” drift component.
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
