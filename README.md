@@ -315,6 +315,34 @@ That optimal action is:
 
 ![optimal_at](optimal_at.png)
 
+This formula for 𝑎𝑡_start was already derived earlier in the on-policy model. Now, in the off-policy setting, we reuse this same optimal analytic form to evaluate the Q-function more stably, instead of performing noisy maximizations.
+
+Why we use it:
+
+This analytic substitution has two major advantages:
+
+* Avoids overestimation bias common in off-policy Q-learning caused by taking maximum over sample-based Q-values.
+
+* Ensures consistency between on-policy and off-policy settings by using the same hedge formula.
+
+How it fits: By plugging the known 𝑎𝑡_star into Equation optimal Q equation, we obtain a stable Q-value for regression targets in the off-policy FQI step. 
+
+This makes the process:
+
+* mathematically grounded,
+
+* computationally efficient, and
+
+* consistent with the dynamic programming structure of our model.
+
+This step is repeated in backward recursion over time steps 𝑡 = 𝑇 − 1, 𝑇 − 2,...., 0 just like in the on-policy algorithm, but now trained using off-policy data.
+
+This final component of the QLBS algorithm ensures that value updates are accurate and reflect both the optimal policy and the market's risk-return trade-off, closing the loop in the backward Q-function propagation.
+
+
+
+
+
 
 
 
