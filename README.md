@@ -337,7 +337,7 @@ This makes the process:
 
 This step is repeated in backward recursion over time steps 𝑡 = 𝑇 − 1, 𝑇 − 2,...., 0 just like in the on-policy algorithm, but now trained using off-policy data.
 
-This final component of the QLBS algorithm ensures that value updates are accurate and reflect both the optimal policy and the market's risk-return trade-off, closing the loop in the backward Q-function propagation.
+This final component of the algorithm ensures that value updates are accurate and reflect both the optimal policy and the market's risk-return trade-off, closing the loop in the backward Q-function propagation.
 
 
 
